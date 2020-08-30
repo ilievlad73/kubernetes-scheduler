@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: httpservercustomscheduler
+  labels:
+    app: http-server-custom-scheduler
+spec:
+  selector:
+    matchLabels:
+      app: http-server-custom-scheduler
+      tier: web
+  template:
+    metadata:
+      labels:
+        app: http-server-custom-scheduler
+        tier: web
+    spec:
+      schedulerName: custom-scheduler
+      containers:
+        - name: http-server-custom-scheduler
+          image: vladalv/http-server:v1
+          ports:
+            - containerPort: 8080
