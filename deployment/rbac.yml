@@ -1,10 +1,10 @@
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
 metadata:
-  name: custom-scheduler
+  name: custom-scheduler-sa
 subjects:
   - kind: ServiceAccount
-    name: custom-scheduler
+    name: custom-scheduler-sa
     namespace: default
 roleRef:
   kind: ClusterRole

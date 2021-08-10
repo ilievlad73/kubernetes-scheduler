@@ -14,7 +14,7 @@ spec:
       labels:
         app: custom-scheduler
     spec:
-      serviceAccount: custom-scheduler
+      serviceAccount: custom-scheduler-sa
       containers:
         - name: custom-scheduler
           image: vladalv/custom-scheduler:v1
